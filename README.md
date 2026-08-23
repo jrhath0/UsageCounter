@@ -3,7 +3,7 @@
 
 A lightweight, borderless system resource monitor built with Python and Tkinter.  Displays real-time CPU and RAM usage with live updating graphs.
 
-```!UsageCounter.png```
+![UsageCounter](UsageCounter.png)
 
 **Features**
 - Real-time Monitoring - Updates every second with current CPU and RAM usage
@@ -16,8 +16,21 @@ A lightweight, borderless system resource monitor built with Python and Tkinter.
 **Requirements**
 - Python 3.6+
 - psutil Library
-- tkinter Library
-- logging Library
+
+**Installation**
+1. Clone the Repository
+```bash
+git clone https://github.com/jrhath0/UsageCounter.git
+cd UsageCounter
+```
+2. Install dependency
+```bash
+pip install psutil
+```
+3. Run the application
+```bash
+python UsageCounter.py
+```
 
 **Usage**
 - Click and drag anywhere on the window to move it
@@ -25,6 +38,6 @@ A lightweight, borderless system resource monitor built with Python and Tkinter.
 - Click the '✕' button in the top-right to close the application
 - Toggle "Always on Top" to keep the window above other applications
 
-**Other Infor**
+**Other Info**
 - Current update interval is 1 second
 - Graph history contains 50 data points
