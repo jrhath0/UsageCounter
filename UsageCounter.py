@@ -1,11 +1,32 @@
 from logging import config, root
 from tkinter import *
 from tkinter import ttk
+from PIL import Image
 import psutil
+import pystray
+import threading
+
 
 # Data Storage
 cpu_history = [0] * 50
 ram_history = [0] * 50
+
+# Create Tray Icon
+def setup_tray():
+    # Use default system icon
+    image = Image.open("icon.png")  # Replace with your own icon file if desired
+
+    icon = pystray.Icon(
+        "UsageCounter",
+        image,
+        "CPU/RAM Usage Monitor",
+        menu=pystray.Menu(
+            pystray.MenuItem("Show", lambda: root.deiconify()),
+            pystray.MenuItem("Hide", lambda: root.withdraw()),
+            pystray.MenuItem("Quit", lambda: (icon.stop(), root.destroy()))
+        )
+    )
+    icon.run()
 
 def frequency_monitor():
     # Get CPU percentage
@@ -192,6 +213,9 @@ def main():
     resize_frame.bind("<ButtonPress-1>", lambda e: "break", add="+")  # Prevent propagation to root for dragging
 
     frequency_monitor()  # Start monitoring in the background
+
+    tray_thread = threading.Thread(target=setup_tray, daemon=True)
+    tray_thread.start()
 
     root.mainloop()
     
