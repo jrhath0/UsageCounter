@@ -3,7 +3,7 @@
 
 A lightweight, borderless system resource monitor built with Python and Tkinter.  Displays real-time CPU and RAM usage with live updating graphs.
 
-```![UsageCounter](UsageCounter.png)```
+```(UsageCounter.png)```
 
 **Features**
 - Real-time Monitoring - Updates every second with current CPU and RAM usage
