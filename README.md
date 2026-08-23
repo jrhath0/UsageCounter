@@ -16,6 +16,7 @@ A lightweight, borderless system resource monitor built with Python and Tkinter.
 **Requirements**
 - Python 3.6+
 - psutil Library
+- pystrays Library
 
 **Installation**
 1. Clone the Repository
