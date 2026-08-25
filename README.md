@@ -43,6 +43,7 @@ python UsageCounter.py
 **Known Issues**
 - Window stuttering when resizing and moving
 - Window temporarily disappearing when moving
+- Application starts with "Always on Top" checked, but it won't take effect until you uncheck and recheck the option
 
 **Other Info**
 - Current update interval is 1 second
